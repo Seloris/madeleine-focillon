@@ -1,3 +1,12 @@
 p {
   line-height: 1.6em;
+  max-width: 600px;
+}
+
+.text {
+  margin: auto;
+}
+
+p a {
+  color: #408d66;
 }
