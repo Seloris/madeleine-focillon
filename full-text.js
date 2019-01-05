@@ -7,19 +7,35 @@ document.addEventListener('DOMContentLoaded', function() {
       return `<a href="./lexique.html?mot=${g1}">${f}</a>`;
     });
   });
+  const scroll = document.querySelector('.scrolling');
 
   const up = document.getElementById('up');
   up.addEventListener('click', function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    if (scroll.scrollTop > 8000) {
+      scroll.scrollTop = 0;
+    } else {
+      document.querySelector('h1').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+      });
+    }
   });
 
-  const scroll = document.querySelector('.scrolling');
+  let isShown = false;
   scroll.onscroll = function() {
+    console.log(scroll.scrollTop);
     if (scroll.scrollTop > 500) {
+      if (isShown) {
+        return;
+      }
+      isShown = true;
       up.classList.add('fadeInUp');
       up.classList.remove('fadeOutDown');
     } else {
+      if (!isShown) {
+        return;
+      }
+      isShown = false;
       up.classList.add('fadeOutDown');
       up.classList.remove('fadeInUp');
     }

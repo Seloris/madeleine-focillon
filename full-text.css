@@ -39,6 +39,7 @@ p a {
   height: 60px;
   /* display: none; */
   position: fixed;
+  opacity: 0;
   bottom: 24px;
   right: 52px;
   z-index: 99;
