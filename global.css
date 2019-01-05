@@ -11,7 +11,9 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   position: relative;
-  font-family: 'Georgia';
+  font-family: Georgia;
+  color: #434343;
+  font-size: 16px;
 }
 
 * {
@@ -23,49 +25,73 @@ a {
   text-decoration: none;
 }
 
-.page {
+.scrolling {
+  overflow-y: auto;
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  overflow: auto;
+  padding: 48px;
 }
 
-.two-columns {
+.page {
+  max-width: 1028px;
+  margin: auto;
   display: flex;
-  flex-direction: row;
-}
-
-.two-columns > * {
-  flex: 1;
-}
-.left {
-  position: relative;
-}
-
-.word {
-  position: absolute;
-}
-
-.right {
-  display: flex;
-  text-align: left;
   flex-direction: column;
-  margin: 24px;
 }
 
-.right a {
-  display: block;
+.page h1 {
+  align-self: center;
   font-style: italic;
-  margin: 60px 0px;
+  font-size: 4em;
   font-weight: 500;
 }
 
-.p1 {
-  color: #c1c1c1;
+.page h2 {
+  align-self: center;
+  font-style: italic;
+  font-size: 1.8em;
+  font-weight: 500;
 }
 
-.p2 {
-  font-size: 2em;
+.menu {
+  display: flex;
+  align-self: center;
+  margin-bottom: 24px;
+}
+.menu .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #c5c5c5;
+  margin: 12px;
+}
+
+.menu .dot.selected {
+  background: #676767;
+}
+
+table {
+  font-size: 1.2em;
+  margin: 24px;
+}
+
+table tr {
+  display: flex;
+  min-height: 1em;
+}
+
+tr td {
+  flex: 1;
+}
+
+tr td:first-child {
+  color: #408d66;
+  font-family: Helvetica, sans-serif;
+}
+
+.lexique tr td:first-child {
+  max-width: 200px;
 }
