@@ -7,4 +7,21 @@ document.addEventListener('DOMContentLoaded', function() {
       return `<a href="./lexique.html?mot=${g1}">${f}</a>`;
     });
   });
+
+  const up = document.getElementById('up');
+  up.addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+  const scroll = document.querySelector('.scrolling');
+  scroll.onscroll = function() {
+    if (scroll.scrollTop > 500) {
+      up.classList.add('fadeInUp');
+      up.classList.remove('fadeOutDown');
+    } else {
+      up.classList.add('fadeOutDown');
+      up.classList.remove('fadeInUp');
+    }
+  };
 });

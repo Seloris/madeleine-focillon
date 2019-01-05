@@ -59,7 +59,7 @@ a {
 .menu {
   display: flex;
   align-self: center;
-  margin-bottom: 24px;
+  margin-bottom: 50px;
 }
 .menu .dot {
   width: 16px;
