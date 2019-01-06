@@ -11,18 +11,8 @@ p a {
   color: #408d66;
 }
 
-.presentation {
-  align-self: center;
-  text-align: center;
-}
-
-.presentation h2 {
-  margin: 0;
-  font-size: 1.4em;
-  line-height: 1.5em;
-}
 .summary {
-  margin: 52px 0;
+  margin-bottom: 52px;
   display: flex;
   flex-direction: column;
   line-height: 1.5em;
