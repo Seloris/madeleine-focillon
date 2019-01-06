@@ -97,6 +97,8 @@ table tr {
 
 tr td {
   flex: 1;
+  transition: 0.3s all;
+  line-height: 24px;
 }
 
 tr td:first-child {

@@ -1,0 +1,7 @@
+tr td:last-child:hover {
+  cursor: pointer;
+}
+
+tr td:first-child:hover {
+  font-size: 1.2em;
+}

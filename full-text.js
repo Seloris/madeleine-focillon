@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  handleCitation();
+
   const regex = /\b(art roman|architecture|contenu|espace|forme|linguistique|lumière|masse|matière|métaphore|objet|oeuvre|ornement|peinture|plein|relief|signe|statue|structure|touche|vide)[s]?\b/gi;
   const paragraphs = document.querySelectorAll('p');
   paragraphs.forEach(p => {
@@ -41,3 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 });
+
+function handleCitation() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const citation = urlParams.get('citation');
+  if (citation) {
+    const citEl = document.getElementById('c' + citation);
+    if (citEl) {
+      citEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+      citEl.style.fontWeight = 600;
+    }
+  }
+}
